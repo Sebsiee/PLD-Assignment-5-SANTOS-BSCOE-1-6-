@@ -4,41 +4,44 @@ def introduction():
 def gradePUP():
     while True:
         try:
-            gradeInput = int(input("Input Your Grade: "))
+            inputGrade = float(input("Input Your Grade: "))
+            roundedoffGrade = round(inputGrade)
+            print("")
+            print("Your grade is:", round(inputGrade))
         except ValueError:
             print("Sorry, I didn't understand that.")
             continue
-        if gradeInput >= 101:
+        if roundedoffGrade >= 101:
             print("That was above the limit of grades.")
             continue
-        if gradeInput >= 97 and gradeInput <= 100:
+        if roundedoffGrade >= 97 and roundedoffGrade <= 100:
             print("Grade Mark: 1.0")
             print("Description: Excellent")
-        elif gradeInput >= 94 and gradeInput <= 96:
+        elif roundedoffGrade >= 94 and roundedoffGrade <= 96:
             print("Grade Mark: 1.25")
             print("Description: Excellent")
-        elif gradeInput >= 91 and gradeInput <= 93:
+        elif roundedoffGrade >= 91 and roundedoffGrade <= 93:
             print("Grade Mark: 1.5")
             print("Description: Very Good")
-        elif gradeInput >= 88 and gradeInput <= 90:
+        elif roundedoffGrade >= 88 and roundedoffGrade <= 90:
             print("Grade Mark: 1.75")
             print("Description: Very Good")
-        elif gradeInput >= 85 and gradeInput <= 87:
+        elif roundedoffGrade >= 85 and roundedoffGrade <= 87:
             print("Grade Mark: 2.0")
             print("Description: Good")
-        elif gradeInput >= 82 and gradeInput <= 84:
+        elif roundedoffGrade >= 82 and roundedoffGrade <= 84:
             print("Grade Mark: 2.25")
             print("Description: Good")
-        elif gradeInput >= 79 and gradeInput <= 81:
+        elif roundedoffGrade >= 79 and roundedoffGrade <= 81:
             print("Grade Mark: 2.5")
             print("Description: Satisfactory")
-        elif gradeInput >= 76 and gradeInput <= 78:
+        elif roundedoffGrade >= 76 and roundedoffGrade <= 78:
             print("Grade Mark: 2.75")
             print("Description: Satisfactory")
-        elif gradeInput == 75:
+        elif roundedoffGrade == 75:
             print("Grade Mark: 3.0")
             print("Description: Passing")
-        elif gradeInput >= 65 and gradeInput <= 74:
+        elif roundedoffGrade >= 65 and roundedoffGrade <= 74:
             print("Grade Mark: 5.0")
             print("Description: Failure")
         else:
