@@ -1,5 +1,5 @@
 def introduction():
-    print("Welcome!")
+    print("Welcome to my Program 3 - Life Stages!")
 
 def lifeStage():
     while True:
@@ -18,5 +18,11 @@ def lifeStage():
             print("You're an Adult. How Resoponsible!")
         break
 
+def goodbye():
+    print()
+    print("Thank you for using my program!")
+
+
 introduction()
 lifeStage()
+goodbye()
