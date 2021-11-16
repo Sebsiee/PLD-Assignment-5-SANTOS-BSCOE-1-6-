@@ -1,13 +1,18 @@
+import math
+
 def introduction():
     print("Welcome to my Program 1 - PUP Grades!")
+
+def round_half_up(n, decimals=0):
+    multiplier = 10 ** decimals
+    return math.floor(n*multiplier + 0.5) / multiplier
 
 def gradePUP():
     while True:
         try:
             inputGrade = float(input("Input Your Grade: "))
-            roundedoffGrade = round(inputGrade)
-            print("")
-            print("Your grade is:", round(inputGrade))
+            roundedoffGrade = round_half_up(inputGrade)
+            print("Your rounded off grade is: %.0f" % roundedoffGrade)
         except ValueError:
             print("Sorry, I didn't understand that.")
             continue
@@ -49,7 +54,7 @@ def gradePUP():
             print("Incomplete / Withdrawn / Dropped")  
             while True:
                 inWiDro = str(input("Y or N: "))
-                if inWiDro == "Y" or "y":
+                if inWiDro == "Y" or inWiDro == "y":
                     while True:
                         print("Type the number of your category:")
                         print("1 = Incomplete, 2 = Withdrawn, 3 = Dropped")
@@ -65,14 +70,12 @@ def gradePUP():
                             break
                         else:
                             print("Sorry, I didn't understand that.")
-                            continue
-                    break
-                
-                elif inWiDro == "N" or "n":
+                            continue   
+                    break          
+                elif inWiDro == "N" or inWiDro == "n":
                     print("You should enter your grades again.")
                     gradePUP()
                     break
-
                 else:
                     print("Sorry, I didn't understand that.")
                     continue
